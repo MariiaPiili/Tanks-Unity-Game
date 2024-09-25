@@ -249,10 +249,6 @@ public class ScoreManager : MonoBehaviour
 }
 ```
 
-## References
-
-https://yandex.ru/games/app/207145#app-id=207145&catalog-session-uid=catalog-eafe7c04-74d0-557d-ac21-3bdc5004e019-1727289577327-109c&rtx-reqid=5744098127717580016&pos=%7B%22listType%22%3A%22played%22%2C%22tabCategory%22%3A%22common%22%7D&redir-data=%7B%22block%22%3A%22played%22%2C%22block_index%22%3A0%2C%22card%22%3A%22your_games%22%2C%22col%22%3A0%2C%22first_screen%22%3A1%2C%22page%22%3A%22main%22%2C%22rn%22%3A108128833%2C%22row%22%3A0%2C%22rtx_reqid%22%3A%225744098127717580016%22%2C%22same_block_index%22%3A0%2C%22wrapper%22%3A%22played_games%22%2C%22http_ref%22%3A%22https%253A%252F%252Fyandex.ru%252Fgames%252F%22%7D
-
 ## Requirements
 
 Unity Game Engine
