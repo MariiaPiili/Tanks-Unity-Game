@@ -655,8 +655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faee165617749c846898729eee2deaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 0}
-  _keyShoot: 0
+  _bulletPrefab: {fileID: 3573123152568156799, guid: a22695c5bc72cb443bcbb306b4c6cfd9, type: 3}
+  _keyShoot: 303
 --- !u!1 &674161443 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3306841236053350998, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
@@ -715,6 +715,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2787607471787770092, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
   m_PrefabInstance: {fileID: 758296696}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &674161448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674161443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c975769c6e8e7946978ca741d15e2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +833,7 @@ GameObject:
   - component: {fileID: 743230525}
   - component: {fileID: 743230527}
   - component: {fileID: 743230526}
+  - component: {fileID: 743230528}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -943,6 +957,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743230524}
   m_CullTransparentMesh: 1
+--- !u!114 &743230528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743230524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38b45c7592d58b499114149fa2efe3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 743230526}
+  _healthController: {fileID: 674161448}
 --- !u!1001 &758296696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -964,6 +992,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1789470339034719325, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
+      propertyPath: _keyUp
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: -1789470339034719325, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
+      propertyPath: _speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1789470339034719325, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
       propertyPath: KeyDown
       value: 115
       objectReference: {fileID: 0}
@@ -976,9 +1012,21 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -1789470339034719325, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
+      propertyPath: _keyDown
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: -1789470339034719325, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
+      propertyPath: _keyLeft
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: -1789470339034719325, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
       propertyPath: Rigidbody
       value: 
       objectReference: {fileID: 674161445}
+    - target: {fileID: -1789470339034719325, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
+      propertyPath: _keyRight
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2787607471787770092, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3
@@ -1064,6 +1112,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3306841236053350998, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
       insertIndex: -1
       addedObject: {fileID: 674161444}
+    - targetCorrespondingSourceObject: {fileID: 3306841236053350998, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 674161448}
   m_SourcePrefab: {fileID: 100100000, guid: 51a8c85c88ce0a04880c0d36087f5542, type: 3}
 --- !u!1 &862642089 stripped
 GameObject:
@@ -1135,11 +1186,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd75a6a0cc7e854f854139b93f81802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
-  _keyRight: 0
-  _keyLeft: 0
-  _keyUp: 0
-  _keyDown: 0
+  _speed: 5
+  _keyRight: 275
+  _keyLeft: 276
+  _keyUp: 273
+  _keyDown: 274
+--- !u!114 &862642094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862642089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c975769c6e8e7946978ca741d15e2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 5
 --- !u!1 &928192128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,8 +1493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faee165617749c846898729eee2deaf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 0}
-  _keyShoot: 0
+  _bulletPrefab: {fileID: 3573123152568156799, guid: 1f0ca8949fb26b845aa5ac149651ec96, type: 3}
+  _keyShoot: 32
 --- !u!1 &997955386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,7 +2347,6 @@ GameObject:
   - component: {fileID: 1538487206}
   - component: {fileID: 1538487205}
   - component: {fileID: 1538487204}
-  - component: {fileID: 1538487203}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2291,20 +2354,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1538487203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538487202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b38b45c7592d58b499114149fa2efe3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: {fileID: 0}
-  _healthController: {fileID: 0}
 --- !u!114 &1538487204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,6 +2954,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4680079889262480246, guid: c966dba3b37d0424d975164d1f90b1ae, type: 3}
       insertIndex: -1
       addedObject: {fileID: 862642093}
+    - targetCorrespondingSourceObject: {fileID: 4680079889262480246, guid: c966dba3b37d0424d975164d1f90b1ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 862642094}
   m_SourcePrefab: {fileID: 100100000, guid: c966dba3b37d0424d975164d1f90b1ae, type: 3}
 --- !u!1 &2087579045
 GameObject:
@@ -2917,6 +2969,7 @@ GameObject:
   - component: {fileID: 2087579046}
   - component: {fileID: 2087579048}
   - component: {fileID: 2087579047}
+  - component: {fileID: 2087579049}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3040,6 +3093,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087579045}
   m_CullTransparentMesh: 1
+--- !u!114 &2087579049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087579045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38b45c7592d58b499114149fa2efe3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 2087579047}
+  _healthController: {fileID: 862642094}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
