@@ -1,5 +1,5 @@
 # Tanks 2-player game 
-A 2-player shooter game, including simple game mechanics and UI, built using Unity/C#.
+A 2-player shooter game, including simple game mechanics, built using Unity/C#.
 ![game](https://github.com/MariiaPiili/Tanks-Unity-Game/blob/main/tanks.png)
 ## Instructions
 Each player controls 4 keys on the keyboard to move their tank. The first player to hit the other player 5 times wins the round.
